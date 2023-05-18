@@ -17,44 +17,34 @@ using System.Threading.Tasks;
 
 namespace Projeto_Produtos_Sprint_3
 {
-    public class Produto
+    public class Produtos
     {
-        public int Codigo {get;set;}
+          public int Codigo {get;set;}
         public string NomeProduto {get;set;}
         public float Preco {get;set;}
-        public DateTime DataCadastro {get;set;}
+        public DateTime DataCadastro = DateTime.Now;
         public Marca Marca {get;set;}
         public Usuario CadastradoPor {get;set;}
-        public List<Produto> ListaDeProdutos {get;set;}
+        public List<Produtos> ListaDeProdutos {get;set;}
+      
+      public void Cadastrar()
+      {
+        Console.WriteLine($"Qual é o código do produto?");
+       int codigo = int.Parse(Console.ReadLine());
 
-        public string Cadastrar()
-        {
-            Produto produto = new Produto();
+        Console.WriteLine($"Qual é o nome do produto?");
+       string nomeProduto = Console.ReadLine();
+        
+        Console.WriteLine($"Qual o preço do produto?");
+        float preco = float.Parse(Console.ReadLine());
+        
+        Console.WriteLine($"Data de cadastro do produto = {DataCadastro} ");
 
-           Console.WriteLine($"Qual o nome do produto:");
-           produto.NomeProduto = Console.ReadLine();
+        Console.WriteLine($"Qual a marca do produto?");
+        
+        
+        
+      }
 
-           Console.WriteLine($"Qual o preço do produto :");
-           produto.Preco = float.Parse(Console.ReadLine());
-           
-           Console.WriteLine($"Text");
-           
-            
-
-            return "Produto Cadastrado";
-        }
-
-        public List<Produto> Listar()
-        {
-           Console.WriteLine($"{ListaDeProdutos}");
-           return ListaDeProdutos;
-           
-        }
-         
-        public string Deletar(Produto)
-        {
-            ListaDeProdutos.RemoveAt();
-           return "Produto Deletado";
-        }
     }
 }
