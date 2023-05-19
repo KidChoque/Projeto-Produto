@@ -11,6 +11,21 @@
 // Dica: crie os métodos e atributos primeiro, e só depois comece a implementar as ações nos métodos, isso vai gerar uma visão mais sistêmica de seu projeto.
 using Projeto_Produtos_Sprint_3;
 
+// Marca marca = new Marca();
+
+// marca.Cadastrar();
+
+// marca.Cadastrar();
+
+// marca.Listar();
+
+// marca.Deletar();
+
+// marca.Listar();
+
+// Console.WriteLine($"");
+
 Produtos produto = new Produtos();
 
 produto.Cadastrar();
+

@@ -7,6 +7,12 @@ namespace Projeto_Produtos_Sprint_3
 {
     public class Login
     {
+        public bool Logado;
+
+        public Login()
+        {
+            
+        }
         
     }
 }
